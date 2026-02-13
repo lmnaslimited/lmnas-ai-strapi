@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benefit_questions",
+  "info": {
+    "singularName": "benefit-question",
+    "pluralName": "benefit-questions",
+    "displayName": "Benefit Question",
+    "description": "Question definitions grouped by benefit type"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "benefitType": {
+      "type": "enumeration",
+      "enum": [
+        "housing",
+        "food",
+        "healthcare",
+        "utilities",
+        "transportation",
+        "education",
+        "employment",
+        "childcare",
+        "legal",
+        "other"
+      ],
+      "required": true
+    },
+    "questionId": {
+      "type": "uid",
+      "required": true
+    },
+    "key": {
+      "type": "text",
+      "required": true
+    },
+    "question": {
+      "type": "text",
+      "required": true
+    },
+    "inputType": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "number",
+        "options"
+      ],
+      "required": true,
+      "default": "text"
+    },
+    "options": {
+      "type": "json"
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    }
+  }
+}
