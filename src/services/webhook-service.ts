@@ -27,7 +27,7 @@ export const webhookService = {
       return;
     }
 
-    const headers: HeadersInit = {
+    const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
 
